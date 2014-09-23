@@ -6,7 +6,7 @@ int prevSwitchState = 0;
 
 int led = 2;
 
-long interval = 600000;
+long interval = 5000;
 
 void setup() {
  for(int x = 2; x < 8; x++) {
@@ -26,7 +26,6 @@ void loop() {
    }
  }
  switchState = digitalRead(switchPin);
- 
  if(switchState != prevSwitchState) {
   for (int x = 2; x < 8; x++) {
     digitalWrite(x, LOW);
